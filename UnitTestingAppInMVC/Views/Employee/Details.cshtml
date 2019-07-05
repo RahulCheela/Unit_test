@@ -1,0 +1,40 @@
+﻿@model UnitTestingAppInMVC.Models.Employee
+
+ <h2>Employee Details</h2>
+<table>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Emp_ID)</td>
+        <td>@Html.DisplayFor(model => model.Emp_ID)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Name)</td>
+        <td>@Html.DisplayFor(model => model.Name)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Email)</td>
+        <td>@Html.DisplayFor(model => model.Email)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Designation)</td>
+        <td>@Html.DisplayFor(model => model.Designation)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.City)</td>
+        <td>@Html.DisplayFor(model => model.City)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.State)</td>
+        <td>@Html.DisplayFor(model => model.State)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Country)</td>
+        <td>@Html.DisplayFor(model => model.Country)</td>
+    </tr>
+    <tr style="background-color: orange; padding: 25px;">
+        <td></td>
+        <td>@Html.ActionLink("Edit", "Edit", new { id = Model.Emp_ID }) |
+    @Html.ActionLink("Back to List", "Index")</td>
+ 
+    </tr>
+</table>
+ 

@@ -1,0 +1,68 @@
+﻿@model UnitTestingAppInMVC.Models.Employee
+
+ <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<h2>Edit Employee information</h2>
+ 
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+ 
+    @Html.ValidationSummary(true)
+ 
+    <table>
+        <tr>
+            <td>@Html.LabelFor(model => model.Emp_ID)</td>
+            <td>
+                @Html.EditorFor(model => model.Emp_ID, new { disabled = "disabled", @readonly = "readonly" })
+ 
+                @Html.ValidationMessageFor(model => model.Emp_ID)</td>
+        </tr>
+ 
+        <tr>
+            <td>@Html.LabelFor(model => model.Name)
+            </td>
+            <td>@Html.EditorFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name)</td>
+        </tr>
+ 
+        <tr>
+            <td>@Html.LabelFor(model => model.Email)</td>
+            <td>
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Designation)</td>
+            <td>
+                @Html.EditorFor(model => model.Designation)
+                @Html.ValidationMessageFor(model => model.Designation)
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.City)</td>
+            <td>
+                @Html.EditorFor(model => model.City)
+                @Html.ValidationMessageFor(model => model.City)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.State)</td>
+            <td>@Html.EditorFor(model => model.State)
+                @Html.ValidationMessageFor(model => model.State)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Country)</td>
+            <td>
+                @Html.EditorFor(model => model.Country)
+                @Html.ValidationMessageFor(model => model.Country)</td>
+        </tr>
+        <tr style="background-color: orange; padding: 25px;">
+            <td></td>
+            <td>
+                <input type="submit" value="Save" />
+                @Html.ActionLink("Back to List", "Index")
+            </td>
+        </tr>
+    </table>    
+}
